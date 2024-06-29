@@ -37,8 +37,6 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    SmartDashboard.putNumber("Sensor Dist", noteDetectorSubsytem.getSensorDist());
-    SmartDashboard.putBoolean("Ring Status", noteDetectorSubsytem.getRingStatus());
   }
 
   /**

@@ -6,6 +6,7 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.RobotController;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class NoteDetectorSubsytem extends SubsystemBase {
@@ -33,6 +34,9 @@ public class NoteDetectorSubsytem extends SubsystemBase {
 
     // Formula to calculate range in Centimeters:
     dist = (ultrasonicSensor.getValue() * voltageScaleFactor * 0.125)/2.54;
+
+    SmartDashboard.putNumber("Sensor Dist", this.getSensorDist());
+    SmartDashboard.putBoolean("Ring Status", this.getRingStatus());
   }
 
   /*
